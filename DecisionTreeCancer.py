@@ -1,3 +1,4 @@
+# Supervised machine learning algorithm
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split, cross_validate

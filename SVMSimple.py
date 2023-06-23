@@ -1,3 +1,4 @@
+# Supervised machine learning algorithm
 import numpy as np
 from matplotlib import pyplot as plt
 from sklearn import svm

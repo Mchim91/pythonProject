@@ -1,3 +1,4 @@
+# Supervised machine learning algorithm
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 vec = TfidfVectorizer()

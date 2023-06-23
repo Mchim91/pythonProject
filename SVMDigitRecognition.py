@@ -1,3 +1,4 @@
+# Supervised machine learning algorithm
 import matplotlib.pyplot as plt
 from sklearn import datasets, svm, metrics
 from sklearn.metrics import accuracy_score

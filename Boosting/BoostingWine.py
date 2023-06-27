@@ -14,7 +14,7 @@ def is_tasty(quality):
         return 0
 
 
-data = pd.read_csv("wine.csv", sep=";")
+data = pd.read_csv("./wine.csv", sep=";")
 
 features = data[
     ["fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides", "free sulfur dioxide",

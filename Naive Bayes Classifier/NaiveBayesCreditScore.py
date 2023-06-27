@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 
-data = pd.read_csv("credit_data.csv")
+data = pd.read_csv("./credit_data.csv")
 
 features = data[["income", "age", "loan"]]
 target = data.default

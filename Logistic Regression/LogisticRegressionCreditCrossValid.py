@@ -1,19 +1,19 @@
 # Supervised machine learning algorithm
 import pandas as pd
 import numpy as np
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_validate
 
-credit_data = pd.read_csv("credit_data.csv")
+credit_data = pd.read_csv("./credit_data.csv")
 
 features = credit_data[["income", "age", "loan"]]
-targets = credit_data.default
+target = credit_data.default
 
 # machine learning handle arrays not data-frames
 X = np.array(features).reshape(-1, 3)
-y = np.array(targets)
+y = np.array(target)
 
-model = RandomForestClassifier()
-predicted = cross_validate(model, X, y, cv=10)
+model = LogisticRegression()
+predicted = cross_validate(model, X, y, cv=5)
 
 print(np.mean(predicted['test_score']))

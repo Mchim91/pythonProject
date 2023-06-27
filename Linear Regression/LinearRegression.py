@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error
 import math
 
 # read .csv into DataFrame
-house_data = pd.read_csv("house_prices.csv")
+house_data = pd.read_csv("./house_prices.csv")
 size = house_data['sqft_living']
 price = house_data['price']
 

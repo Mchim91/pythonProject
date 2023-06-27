@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 from sklearn import preprocessing
 from sklearn.model_selection import cross_val_score
 
-data = pd.read_csv("credit_data.csv")
+data = pd.read_csv("./credit_data.csv")
 
 features = data[["income", "age", "loan"]]
 target = data.default

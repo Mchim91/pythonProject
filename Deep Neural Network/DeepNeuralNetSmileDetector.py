@@ -24,7 +24,6 @@ labels = np.array(labels)
 
 # apply min-max normalization (here just /255)
 pixel_intensities = pixel_intensities / 255.0
-print(pixel_intensities)
 
 # create the model (deep neural networks)
 model = Sequential()
@@ -39,3 +38,15 @@ model.compile(loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 model.fit(pixel_intensities, labels, epochs=1000, batch_size=20, verbose=2)
+
+# handle the test dataset (2 images)
+print("Testing the neural network ....")
+
+test_pixel_intensities = []
+
+# test_image1 = Image.open('../test_set/happy_test.png').convert('1')
+test_image1 = Image.open('../test_set/sad_test.png').convert('1')
+test_pixel_intensities.append(list(test_image1.getdata()))
+
+test_pixel_intensities = np.array(test_pixel_intensities)/255.0
+print(model.predict(test_pixel_intensities).round())
